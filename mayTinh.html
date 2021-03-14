@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<form>
+    <input type="number" id="number a">
+    <input type="number" id="number b"><br><br/>
+    <input type="button" onclick="Addition()" value="Addition(+)">
+    <input type="button" onclick="Subtraction()" value="Subtraction(-)">
+    <input type="button" onclick="Multiplication()" value="Multiplication(x)">
+    <input type="button" onclick="Division()" value="Division(/)">
+    <p id="Kết quả"></p>
+</form>
+<script>
+    function Addition(){
+        let a = +document.getElementById('number a').value;
+        let b = +document.getElementById('number b').value;
+        let result = a + b;
+        document.getElementById('Kết quả').innerText='Kết quả cộng là:' + result.toFixed(3);
+    }
+    function Subtraction(){
+        let a = +document.getElementById('number a').value;
+        let b = +document.getElementById('number b').value;
+        let result = a - b;
+        document.getElementById('Kết quả').innerText='Kết quả trừ là:' + result.toFixed(3);
+    }
+    function Multiplication(){
+        let a = +document.getElementById('number a').value;
+        let b = +document.getElementById('number b').value;
+        let result = a * b;
+        document.getElementById('Kết quả').innerText='Kết quả nhân là:' + result.toFixed(3);
+    }
+    function Division(){
+        let a = +document.getElementById('number a').value;
+        let b = +document.getElementById('number b').value;
+        let result = a / b;
+        document.getElementById('Kết quả').innerText='Kết quả chia là:' + result.toFixed(3);
+    }
+</script>
+</body>
+</html>
